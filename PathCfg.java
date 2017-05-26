@@ -1,0 +1,6 @@
+
+class PathCfg {
+
+    double xoffset;
+
+}
