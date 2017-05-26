@@ -56,7 +56,7 @@ public class JavaTerrain extends Terrain {
 	    terrain.fill_terrain();
 
 	    if (debug >= 1) {
-		DrawLineAntialias.draw(img, 5, 5, 100, 100, black);
+		Bressenham.drawLine(img, 5, 5, 100, 100, black);
 	    }
 		
 	    pter.plot_terrain(img, depth, terrain, black);
