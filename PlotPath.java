@@ -159,9 +159,9 @@ public class PlotPath {
 		xpos %= img.getWidth();
 		ypos %= img.getHeight();
       
-		img.rgb[ypos*img.getWidth()+xpos+0] = (char) (fill_color[0] >> 8);
-		img.rgb[ypos*img.getWidth()+xpos+1] = (char) (fill_color[1] >> 8);
-		img.rgb[ypos*img.getWidth()+xpos+2] = (char) (fill_color[2] >> 8);		
+		img.rgb[ypos*img.getWidth()*3+xpos*3+0] = (char) (fill_color[0] >> 8);
+		img.rgb[ypos*img.getWidth()*3+xpos*3+1] = (char) (fill_color[1] >> 8);
+		img.rgb[ypos*img.getWidth()*3+xpos*3+2] = (char) (fill_color[2] >> 8);		
       
 	    }
 
