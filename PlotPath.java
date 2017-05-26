@@ -57,6 +57,8 @@ public class PlotPath {
 
 	double vec[] = { 0.45, 0.30 };
 
+	int offset;
+	
 	normalize_2d(vec);
   
 	yi = 1;
@@ -156,12 +158,14 @@ public class PlotPath {
 		    ypos=-ypos;
 		}
 
-		xpos %= img.getWidth();
-		ypos %= img.getHeight();
-      
-		img.rgb[ypos*img.getWidth()*3+xpos*3+0] = (char) (fill_color[0] >> 8);
-		img.rgb[ypos*img.getWidth()*3+xpos*3+1] = (char) (fill_color[1] >> 8);
-		img.rgb[ypos*img.getWidth()*3+xpos*3+2] = (char) (fill_color[2] >> 8);		
+		xpos %= img.getWidth() - 1;
+		ypos %= img.getHeight() - 1;
+
+		offset = ypos * img.getWidth() * 3 + xpos * 3;
+		
+		img.rgb[offset+0] = (char) (fill_color[0] >> 8);
+		img.rgb[offset+1] = (char) (fill_color[1] >> 8);
+		img.rgb[offset+2] = (char) (fill_color[2] >> 8);		
       
 	    }
 
