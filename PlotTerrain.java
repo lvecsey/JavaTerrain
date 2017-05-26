@@ -157,13 +157,13 @@ public class PlotTerrain {
 
 		System.err.println("xp2 " + xp2.x0 + " " + xp2.y0);
 		System.err.println("xp2 " + xp2.x1 + " " + xp2.y1);				
-		//		if (xp1.x0 != xp1.x1)
-		//		    DrawLineAntialias.draw(img, xp1.x0, xp1.y0, xp1.x1, xp1.y1, fill_color);
+		if (xp1.x0 != xp1.x1)
+		    DrawLineAntialias.draw(img, xp1.x0, xp1.y0, xp1.x1, xp1.y1, fill_color);
 
-		//		if ( (xp2.x0 != xp2.x1) && (xp2.y0 != xp2.y1) )
-		//		    DrawLineAntialias.draw(img, xp2.x0, xp2.y0, xp2.x1, xp2.y1, fill_color);
+		if ( (xp2.x0 != xp2.x1) && (xp2.y0 != xp2.y1) )
+		    DrawLineAntialias.draw(img, xp2.x0, xp2.y0, xp2.x1, xp2.y1, fill_color);
 
-		//		if (xp1.x0 != xp2.x0)
+		//if (xp1.x0 != xp2.x0)
 		//		    DrawLineAntialias.draw(img, xp1.x0, xp1.y0, xp2.x0, xp2.y0, fill_color);
 
 		if (xp2.x0 != xp1.x0)

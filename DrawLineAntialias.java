@@ -24,9 +24,9 @@ public class DrawLineAntialias {
     void _dla_plot(Image img, int x, int y, int[] col, float br) {
 	int[] oc = new int[3];
 	_dla_changebrightness(col, oc, br);
-	img.rgb[y*img.getWidth()+x+0] = (char) oc[0];
-	img.rgb[y*img.getWidth()+x+1] = (char) oc[1];
-	img.rgb[y*img.getWidth()+x+2] = (char) oc[2];	
+	img.rgb[y*img.getWidth()*3+x*3+0] = (char) (oc[0]>>8);
+	img.rgb[y*img.getWidth()*3+x*3+1] = (char) (oc[1]>>8);
+	img.rgb[y*img.getWidth()*3+x*3+2] = (char) (oc[2]>>8);	
     }
 
     static int ipart_(double X) { return (int) X; }
