@@ -152,22 +152,12 @@ public class PlotTerrain {
 		xp2.x1 = (int) xpos;
 		xp2.y1 = (int) ypos;
 
-		System.err.println("xp1 " + xp1.x0 + " " + xp1.y0);
-		System.err.println("xp1 " + xp1.x1 + " " + xp1.y1);
 
-		System.err.println("xp2 " + xp2.x0 + " " + xp2.y0);
-		System.err.println("xp2 " + xp2.x1 + " " + xp2.y1);				
-		if (xp1.x0 != xp1.x1)
-		    DrawLineAntialias.draw(img, xp1.x0, xp1.y0, xp1.x1, xp1.y1, fill_color);
+		Bressenham.drawLine(img, xp1.x0, xp1.y0, xp1.x1, xp1.y1, fill_color);
 
-		if ( (xp2.x0 != xp2.x1) && (xp2.y0 != xp2.y1) )
-		    DrawLineAntialias.draw(img, xp2.x0, xp2.y0, xp2.x1, xp2.y1, fill_color);
-
-		//if (xp1.x0 != xp2.x0)
-		//		    DrawLineAntialias.draw(img, xp1.x0, xp1.y0, xp2.x0, xp2.y0, fill_color);
-
-		if (xp2.x0 != xp1.x0)
-		    DrawLineAntialias.draw(img, xp2.x0, xp2.y0, xp1.x1, xp1.y1, fill_color);
+		Bressenham.drawLine(img, xp2.x0, xp2.y0, xp2.x1, xp2.y1, fill_color);		
+		Bressenham.drawLine(img, xp1.x0, xp1.y0, xp2.x0, xp2.y0, fill_color);
+		Bressenham.drawLine(img, xp2.x0, xp2.y0, xp1.x1, xp1.y1, fill_color);
 		
 	    }
 	}
