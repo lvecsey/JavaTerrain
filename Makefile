@@ -8,7 +8,7 @@ $(HOME)/public_html/images/output_JavaTerrain.png : img_1920x1080.rgb
 
 img_1920x1080.rgb : RENDER_RES=1920x1080
 
-img_1920x1080.rgb : $(PROGRAM).class Terrain.class Image.class PlotTerrain.class Point.class Point3d.class DrawLineAntialias.class XPack.class ApplyRot.class PathCfg.class PlotPath.class
+img_1920x1080.rgb : $(PROGRAM).class Terrain.class Image.class PlotTerrain.class Point.class Point3d.class XPack.class ApplyRot.class PathCfg.class PlotPath.class Bressenham.class
 	@java $(PROGRAM) > $@
 
 %.class : %.java
